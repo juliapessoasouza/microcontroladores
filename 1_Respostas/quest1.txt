@@ -1,2 +1,7 @@
-Question�rio 1:
-1- Sistemas embaracados s�o 
+Questionário 1:
+1- Sistemas embarcados são sistemas que executam apenas uma função, repetidas vezes.
+
+2- Sistemas microprocessados são os sistemas que realizam os cálculos e as tomadas de decisão de um computador.
+
+3- a) GPS e navegação, alarmes.
+   b) 
