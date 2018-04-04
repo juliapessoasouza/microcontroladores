@@ -7,6 +7,6 @@ Questionário 1:
    b) Micro-ondas, máquina de lavar.
    c) PC industrial, computador de vazão.
    
-4- 
+4- As arquiteturas de memória existentes são a Harvard, a qual permite leitura simultânea de dados e do programa e guarda dados constantes na memória do programa, e a Von Neumann, mas simples e menos eficiente que a Harvard.
 
-5- 
+5- A MSP430 permite aritmética diretamente com valores de memória, sua CPU é pequena e eficiente e ela tem aplicações com baixo consumo de energia.
