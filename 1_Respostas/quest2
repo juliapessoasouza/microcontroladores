@@ -1,1 +1,25 @@
-1 - Barramento de dados transmite dados entra as unidades de modo paralelo e bidirecional. O barramento de endereço seleciona a origem ou destino de sinais. Ele conduz endereços.
+1 - Barramento de dados transmite dados entra as unidades de modo paralelo e bidirecional. 
+O barramento de endereço seleciona a origem ou destino de sinais. Ele conduz endereços.
+
+2 - RAM é a memória de acesso dinâmico, o tempo necessário para realizar uma leitura nessa memória é o mesmo para qualquer endereço. É mail volátil. 
+ROM é a memória que só pode ser lida, possui menor volume e não é volátil.
+3 - a) Variáveis são armazenadas em memória RAM, por ser mais rápida e volátil.
+b) Programas são armazenados em memória ROM, para poderem rodar mesmo depois que o dispositivo for desligado ou reiniciado.
+
+4 - Von Neumann é uma arquitetura mais simples, porém mais lenta. Não permite acesso simultâneo às memórias.
+É processada uma única informação por vez, execução e dados percorrem o mesmo barramento.
+A arquitetura Harvard é mais complexa porém mais rápida. Nela, os caminhos de dados e instruções são distintos.
+
+5 - a) Little-endian
+		0x200: 0xCD
+		0x202: 0xAB
+		0x204: 0x51
+		0x206: 0x80 
+
+	b) Big-endian
+		0x200: 0x80
+		0x202: 0x51
+		0x204: 0xAB
+    0x206: 0xCD 
+    
+6 - Utilizando flags de overflow e de sinal negativo.
