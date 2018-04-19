@@ -62,6 +62,64 @@ Potencia:
                         inc.w R12	        ; i++
                         jmp loop_potencia
 	Potencia_1:     mov.w #1, R15
-  Fim_potencia: ret
+  Fim_potencia: 	ret
 
 
+3 - 
+
+Div_unsigned:
+			clr R13;
+	for_div		cmp R14,R15
+			jl End_for_div
+			sub R14,R15
+			inc R13
+			jmp for_div
+	End_for_div: 	mov R13,R15
+			ret
+
+4 - 
+
+Resto_unsigned:
+			clr R13;
+	for_resto	cmp R14,R15
+			jl End_for_resto
+			sub R14,R15
+			inc R13
+			jmp for_resto
+	End_for_resto: 	mov R13,R15
+			ret
+5 - a)
+
+int Primalidade(unsigned int x)
+	{
+		if(x<2) return 0;
+		for(int i = 2; i <= x; i++)
+		{
+			if(x % i == 0 && x != i)
+				return 0;
+		}
+		return 1;
+}
+
+b)
+
+Primalidade: 	mov.w #1,R14	; R14 é o valor do índice (i = 1).
+		mov.w #0,R12	; R12 é o registrador que conta as vezes que o resto é zero.
+looping:     	push.w R15		; Joga o valor de R15 (Número analisado) para a pilha para usar a função #CalculaRST.
+		call #CalculaRST
+		inc.w R14		; i++ 
+		cmp #0,R15		; R15, como é resultado da função CalculaRST, indica o resto da divisão de R15/R14. 
+		jne Condition	; if(R15 == 0) -> R12 ++ //indica se o resto é zero.
+		inc.w R12		;	 R12 ++ ;
+Condition:   	pop R15;	; Resgata o valor de R15, que é o número a ser analisado.
+		cmp.w R14,R15	; Quando i = R15, então a análise terminou.
+		jn FIM
+		jmp looping	; FOR ...
+FIM:        	cmp #2,R12         ; if(R12 == 2){ 
+		jeq true		; 	R15 = 1;
+		mov.w #0,R15	; }else{
+		jmp false		;	R15 = 0;
+true:	     	mov.w #1,R15	;      }
+false: 		ret 
+
+6 - 
